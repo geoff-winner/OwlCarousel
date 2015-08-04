@@ -852,6 +852,8 @@ if (typeof Object.create !== "function") {
             base.ev_types.end = types[2];
         },
 
+// Added the if statement here to allow text selection when trying to highlight text within a slide. 
+// This option was disabled by default but the change shouldn't affect mobile functionality. 
         disabledEvents :  function () {
             var base = this;
             base.$elem.on("dragstart.owl", function (event) { event.preventDefault(); });
